@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Виктория Гордеева — консультант по финансовой помощи</title>
+  <style>
+    :root {
+      --bg: #050507;
+      --card: #111115;
+      --text: #ffffff;
+      --muted: #a0a0b0;
+      --accent-1: #ff0055; /* красный */
+      --accent-2: #8a2be2; /* фиолетовый */
+      --gradient: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+      --glow: 0 0 12px rgba(255, 0, 85, 0.4);
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 16px 0;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    section {
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 24px;
+      margin: 0 0 16px 0;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--gradient);
+      margin-top: 8px;
+    }
+    .service-card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .price {
+      font-weight: 700;
+      color: var(--accent-1);
+      text-shadow: var(--glow);
+    }
+    .time {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .partners {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .partner-badge {
+      background: rgba(255,255,255,0.1);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      color: #fff;
+    }
+    .reviews {
+      display: grid;
+      gap: 16px;
+    }
+    .review-card {
+      background: rgba(255,255,255,0.03);
+      padding: 16px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-2);
+    }
+    .cta-block {
+      text-align: center;
+      padding: 32px 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--gradient);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 700;
+      box-shadow: var(--glow);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(255, 0, 85, 0.6);
+    }
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 28px; }
+      .container { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Официальный партнёр Альфа Банка</span>
+      <h1>Виктория Гордеева</h1>
+      <p class="subtitle">Ваш личный консультант по финансовой помощи.<br>
+        Помогаю выйти на первый доход — до 50 000 ₽/мес.</p>
+    </header>
+
+    <section>
+      <h2>Услуги</h2>
+      <!-- Задание 1 -->
+      <div class="service-card">
+        <div>📝 Написать отзыв на партнёрскую программу</div>
+        <div class="price">2 000 ₽</div>
+        <div class="time">20–40 минут, доступно 1 раз в день</div>
+      </div>
+      <!-- Обычные отзывы -->
+      <div class="service-card">
+        <div>💬 Обычный отзыв (WB, Ozon, Avito)</div>
+        <div class="price">500 ₽</div>
+        <div class="time">15–20 минут, доступно до 4 раз в день (после 1 задания)</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Партнёрство</h2>
+      <div class="partners">
+        <span class="partner-badge">Альфа Банк</span>
+        <span class="partner-badge">Партнёрские сети</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Отзывы клиентов</h2>
+      <div class="reviews">
+        <!-- Отзыв 1 -->
+        <div class="review-card">
+          <p>«Начала с одного задания, за неделю сделала 4 отзыва и получила первые 3 000 ₽. Вика всё объяснила и довела до оплаты — очень благодарна!»</p>
+          <small>— Анна, 23 года</small>
+        </div>
+        <!-- Отзыв 2 -->
+        <div class="review-card">
+          <p>«Думала, что это сложно, но с инструкциями Вики всё понятно. За 2 недели вышла на 12 000 ₽ — это мой первый стабильный доход.»</p>
+          <small>— Марина, 29 лет</small>
+        </div>
+        <!-- Отзыв 3 -->
+        <div class="review-card">
+          <p>«Удобно, что задания простые и можно делать в свободное время. С Викой разобралась с оформлением и теперь беру 3–4 отзыва в день.»</p>
+          <small>— Елена, 31 год</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-block">
+      <a href="https://t.me/ВАШ_НИК_В_ТЕЛЕГРАМЕ" target="_blank" rel="noopener noreferrer" class="btn">
+        💬 Связаться в Telegram
+      </a>
+    </section>
+
+    <footer>
+      <p>Помощь в выборе заданий и отзывов. Доход от 50 000 ₽/мес. при регулярной работе.</p>
+      <p>&copy; 2026 Виктория Гордеева. Все права защищены.</p>
+    </footer>
+  </div>
+</body>
+</html>
